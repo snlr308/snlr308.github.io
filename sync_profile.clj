@@ -56,27 +56,20 @@
               new-content (clojure.string/replace current-content pattern replacement)]
           
           (spit readme-path new-content)
-          (println "✅ README updated locally.")
           
-          ;; Configure Git for the Action Runner to push back
-          (shell "git config user.name 'github-actions[bot]'")
-          (shell "git config user.email 'github-actions[bot]@users.noreply.github.com'")
-          (shell "git add README.md")
-          ;; Only commit/push if there are actually changes
-          (let [status (shell {:out :string} "git status --porcelain")]
+          (shell "git" "config" "user.name" "github-actions[bot]")
+          (shell "git" "config" "user.email" "github-actions[bot]@users.noreply.github.com")
+          (shell "git" "add" "README.md")
+          
+          (let [status (shell {:out :string} "git" "status" "--porcelain")]
             (if (clojure.string/blank? (:out status))
               (println "Checking... No changes to project catalog.")
-              (do
-                (shell "git commit -m 'chore: automated project catalog sync'")
-                ;; (shell "git push")
-                ;; (shell "git" "push" (str "https://" github-username ":" github-token "@github.com/" github-username "/snlr308.git") "main")
-                ;; (println "🚀 Changes pushed to GitHub Profile!")))))
-
-                (let [remote-url (str "https://" github-username ":" github-token "@github.com/" github-username "/snlr308.git")]
-                  (println "🚀 Pushing changes to GitHub Profile...")
-                  ;; Using :sensitive true ensures the remote-url (with token) isn't leaked in logs
-                  (shell {:sensitive true} "git" "push" remote-url "main"))
-        
+              (let [remote-url (str "https://" github-username ":" github-token "@github.com/" github-username "/snlr308.git")]
+                (shell "git" "commit" "-m" "chore: automated project catalog sync")
+                ;; Secure push
+                (shell {:sensitive true} "git" "push" remote-url "main")
+                (println "🚀 Changes pushed to GitHub Profile!")))))
+        ;; This else belongs to the (if (clojure.string/includes? ...))
         (println "❌ Error: Could not find markers in README.md")))))
 
 (sync!)
