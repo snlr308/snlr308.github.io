@@ -1,11 +1,7 @@
 ![Sync Status](https://github.com/snlr308/snlr308/workflows/Sync%20Profile%20Catalog/badge.svg)
 
-
-# Repositories
-
-
-
 <!-- PROJECTS_START -->
+<<<<<<< HEAD
 # Projects
 
 | Repo | Description |  |
@@ -19,4 +15,6 @@
 | **nyancat-adventures** | 2-player cooperative Nyan Cat platformer game. Jump across platforms, collect coins, defeat long-cats, and unlock clothing sets with special powers! | `HTML` |
 
 *Last automated sync: 2026-01-26 (GitHub Actions)*
+=======
+>>>>>>> 3172f78 (Repo listing layout)
 <!-- PROJECTS_END -->
