@@ -68,8 +68,14 @@
               (println "Checking... No changes to project catalog.")
               (do
                 (shell "git commit -m 'chore: automated project catalog sync'")
-                (shell "git push")
-                (println "🚀 Changes pushed to GitHub Profile!")))))
+                ;; (shell "git push")
+                ;; (shell "git" "push" (str "https://" github-username ":" github-token "@github.com/" github-username "/snlr308.git") "main")
+                ;; (println "🚀 Changes pushed to GitHub Profile!")))))
+
+                (let [remote-url (str "https://" github-username ":" github-token "@github.com/" github-username "/snlr308.git")]
+                  (println "🚀 Pushing changes to GitHub Profile...")
+                  ;; Using :sensitive true ensures the remote-url (with token) isn't leaked in logs
+                  (shell {:sensitive true} "git" "push" remote-url "main"))
         
         (println "❌ Error: Could not find markers in README.md")))))
 
