@@ -19,6 +19,6 @@ jobs:
 
       - name: Run Sync Script
         env:
-          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_USERNAME: "snlr308"
         run: bb sync_profile.clj
