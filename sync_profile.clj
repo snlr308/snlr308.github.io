@@ -66,11 +66,11 @@
               (println "Checking... No changes to project catalog.")
 
 (let [remote-url (str "https://x-access-token:" github-token "@github.com/" github-username "/snlr308.git")]
-                (shell "git" "commit" "-m" "chore: automated project catalog sync")
-                ;; Force set the remote URL with the token to override the bot
-                (shell {:sensitive true} "git" "remote" "set-url" "origin" remote-url)
-                (shell "git" "push" "origin" "main")
-                (println "🚀 Changes pushed to GitHub Profile!")))))
+  (shell "git" "commit" "-m" "chore: automated project catalog sync")
+  (println "🚀 Pushing changes to GitHub Profile using PAT...")
+  ;; Direct push to the URL containing the token
+  (shell {:sensitive true} "git" "push" "--force" remote-url "main")
+  (println "✅ Changes pushed successfully!")))))
 
         ;; This else belongs to the (if (clojure.string/includes? ...))
         (println "❌ Error: Could not find markers in README.md")))))
