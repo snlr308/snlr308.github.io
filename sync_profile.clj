@@ -17,7 +17,7 @@
 ;; --- LOGIC ---
 
 (defn fetch-all-repos []
-  (println "🔍 Querying GitHub API for metadata...")
+  (println "Querying GitHub API for metadata...")
   (let [url (str "https://api.github.com/user/repos?per_page=100&sort=updated&type=owner")]
     (-> (http/get url {:headers headers})
         :body
@@ -28,7 +28,7 @@
         private? (get repo :private)
         desc     (or (get repo :description) "-")
         lang     (or (get repo :language) "Nix/Lisp")
-        status   (if private? "🔒" "🌍")]
+        status   (if private? "pri" "pub")]
 ;;    (str "| " status " **" name "** | " desc " | `" lang "` |")))
     (str "| **" name "** | " desc " | `" lang "` |")))
 
@@ -44,7 +44,7 @@
 
 (defn sync! []
   (if-not github-token
-    (do (println "❌ GH_TOKEN not found in environment!") (System/exit 1))
+    (do (println "GH_TOKEN not found in environment!") (System/exit 1))
     (let [repos (fetch-all-repos)
           table-md (generate-markdown-table repos)
           current-content (slurp readme-path)
@@ -66,12 +66,12 @@
             (if (clojure.string/blank? (:out status))
               (println "Checking... No changes to project catalog.")
 
-(let [remote-url (str "https://x-access-token:" github-token "@github.com/" github-username "/snlr308.git")]
+(let [remote-url (str "https://x-access-token:" github-token "@github.com/" github-username "/" github-username ".github.io.git")]
   (shell "git" "commit" "-m" "chore: automated project catalog sync")
   (shell {:sensitive true} "git" "push" "--force" remote-url "main")
-  (println "🚀 Changes pushed successfully!")))))
+  (println "🚀 Changes pushed to snlr308.github.io successfully!")))))
 
         ;; This else belongs to the (if (clojure.string/includes? ...))
-        (println "❌ Error: Could not find markers in README.md")))))
+        (println "Error: Could not find markers in README.md")))))
 
 (sync!)
