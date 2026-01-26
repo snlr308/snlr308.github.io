@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Babashka
-        uses: just-sultanov/setup-babashka@v1.1.1
+        uses: just-sultanov/setup-babashka@latest
 
       - name: Run Sync Script
         env:
