@@ -1,0 +1,22 @@
+name: Sync Profile Catalog
+on:
+  schedule:
+    # Runs every Sunday at midnight
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allows you to run it manually from the "Actions" tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install Babashka
+        uses: javahippie/setup-babashka@v1.1.1
+
+      - name: Run Sync Script
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          GH_USERNAME: "snlr308"
+        run: bb sync_profile.clj
