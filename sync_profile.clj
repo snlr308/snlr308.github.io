@@ -66,10 +66,18 @@
             (if (clojure.string/blank? (:out status))
               (println "Checking... No changes to project catalog.")
 
-(let [remote-url (str "https://x-access-token:" github-token "@github.com/" github-username "/" github-username ".github.io.git")]
+(let [profile-repo-url (str "https://x-access-token:" github-token "@github.com/" github-username "/" github-username ".git")
+      website-repo-url (str "https://x-access-token:" github-token "@github.com/" github-username "/" github-username ".github.io.git")]
+  
   (shell "git" "commit" "-m" "chore: automated project catalog sync")
-  (shell {:sensitive true} "git" "push" "--force" remote-url "main")
-  (println "🚀 Changes pushed to snlr308.github.io successfully!")))))
+  
+  (println "Syncing Profile README...")
+  (shell {:sensitive true} "git" "push" "--force" profile-repo-url "main")
+  
+  (println "Syncing Website...")
+  (shell {:sensitive true} "git" "push" "--force" website-repo-url "main")
+  
+  (println "Full Sync Complete!")))))
 
         ;; This else belongs to the (if (clojure.string/includes? ...))
         (println "Error: Could not find markers in README.md")))))
