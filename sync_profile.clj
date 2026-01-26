@@ -35,7 +35,7 @@
 (defn generate-markdown-table [repos]
   (let [header "| Repo | Description |  |\n| :--- | :--- | :--- |\n"
         rows (->> repos
-                  (remove #(= (:name %) github-username)) ;; Hide the profile repo itself
+                  ;;(remove #(= (:name %) github-username)) ;; Hide the profile repo itself
                   (map format-repo-row)
                   (clojure.string/join "\n"))]
     (str "# Projects\n\n" 
