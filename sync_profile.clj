@@ -47,8 +47,8 @@
     (let [repos (fetch-all-repos)
           table-md (generate-markdown-table repos)
           current-content (slurp readme-path)
-          start-marker ""
-          end-marker   ""]
+          start-marker "<!-- PROJECTS_START -->"
+          end-marker   "<!-- PROJECTS_END -->"]
       
       (if (clojure.string/includes? current-content start-marker)
         (let [pattern (re-pattern (str "(?s)" start-marker ".*" end-marker))
@@ -70,7 +70,7 @@
                 ;; Force set the remote URL with the token to override the bot
                 (shell {:sensitive true} "git" "remote" "set-url" "origin" remote-url)
                 (shell "git" "push" "origin" "main")
-                (println "🚀 Changes pushed to GitHub Profile!"))
+                (println "🚀 Changes pushed to GitHub Profile!")))))
 
         ;; This else belongs to the (if (clojure.string/includes? ...))
         (println "❌ Error: Could not find markers in README.md")))))

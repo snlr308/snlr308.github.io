@@ -5,6 +5,6 @@
 
 
 
-<!-- The PROJECTS_START -->
+<!-- PROJECTS_START -->
 
-<!-- The PROJECTS_END -->
+<!-- PROJECTS_END -->
