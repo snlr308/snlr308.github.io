@@ -5,7 +5,7 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
-| **snlr308** | Command center | `Clojure` |
+| **snlr308.github.io** | Command center | `Clojure` |
 | **query-entity-config** | Safely run 12-hour queries: option to pause and resume, smart caching, audit logs and debug logs (sanitized), dupe handling, "log and continue" on error. Search term is a fixed "filter" (2 needles), additional filters supported in future release. | `Python` |
 | **Archive_Search** | Highly over-engineered grep wrapper: batch processing in the background (tmux), rate limiting, compression, audit logs, archive-in-the-archive, automation-ready, result transformation, hooks to ticketing system or channel, and more. | `Shell` |
 | **POPP-widgets** | Userscripts that extend a SaaS with two crucial functions - click through pagination and calculate USD, and open and cross-link a TS ticket from all details known about a transaction. | `JavaScript` |
