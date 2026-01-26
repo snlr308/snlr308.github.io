@@ -1,0 +1,12 @@
+baseURL = 'https://snlr308.github.io/'
+languageCode = 'en-us'
+title = 'snlr308'
+theme = 'nostyleplease'
+
+[module]
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+  [[module.mounts]]
+    source = 'README.md'
+    target = 'content/_index.md'
