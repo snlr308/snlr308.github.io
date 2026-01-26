@@ -26,18 +26,19 @@
 (defn format-repo-row [repo]
   (let [name     (get repo :name)
         private? (get repo :private)
-        desc     (or (get repo :description) "_No description provided._")
+        desc     (or (get repo :description) "-")
         lang     (or (get repo :language) "Nix/Lisp")
         status   (if private? "🔒" "🌍")]
-    (str "| " status " **" name "** | " desc " | `" lang "` |")))
+;;    (str "| " status " **" name "** | " desc " | `" lang "` |")))
+    (str "| **" name "** | " desc " | `" lang "` |")))
 
 (defn generate-markdown-table [repos]
-  (let [header "| S | Project Name & Description | Tech |\n| :--- | :--- | :--- |\n"
+  (let [header "| Repo | Description |  |\n| :--- | :--- | :--- |\n"
         rows (->> repos
                   (remove #(= (:name %) github-username)) ;; Hide the profile repo itself
                   (map format-repo-row)
                   (clojure.string/join "\n"))]
-    (str "### 🛠️ Systems & Orchestration Catalog\n\n" 
+    (str "# Projects\n\n" 
          header rows "\n\n"
          "*Last automated sync: " (str (java.time.LocalDate/now)) " (GitHub Actions)*")))
 
