@@ -67,10 +67,8 @@
 
 (let [remote-url (str "https://x-access-token:" github-token "@github.com/" github-username "/snlr308.git")]
   (shell "git" "commit" "-m" "chore: automated project catalog sync")
-  (println "🚀 Pushing changes to GitHub Profile using PAT...")
-  ;; Direct push to the URL containing the token
   (shell {:sensitive true} "git" "push" "--force" remote-url "main")
-  (println "✅ Changes pushed successfully!")))))
+  (println "🚀 Changes pushed successfully!")))))
 
         ;; This else belongs to the (if (clojure.string/includes? ...))
         (println "❌ Error: Could not find markers in README.md")))))
