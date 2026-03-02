@@ -94,9 +94,11 @@
   (shell "git" "commit" "-m" "chore: automated project catalog sync")
   
   (println "Syncing Profile README...")
-  (shell {:sensitive true} "git" "push" profile-repo-url "main")
+  ;; Force-push required: pushing this repo's history into a different repo (snlr308/snlr308)
+  (shell {:sensitive true} "git" "push" "--force" profile-repo-url "main")
   
   (println "Syncing Website...")
+  ;; Normal push: same repo, keeps history compatible with local clones
   (shell {:sensitive true} "git" "push" website-repo-url "main")
   
   (println "Full Sync Complete!")))))
