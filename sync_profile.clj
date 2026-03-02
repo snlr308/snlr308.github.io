@@ -88,6 +88,9 @@
 (let [profile-repo-url (str "https://x-access-token:" github-token "@github.com/" github-username "/" github-username ".git")
       website-repo-url (str "https://x-access-token:" github-token "@github.com/" github-username "/" github-username ".github.io.git")]
   
+  ;; Remove the credential helper injected by actions/checkout, which overrides our PAT
+  (shell "git" "config" "--local" "--unset-all" "http.https://github.com/.extraheader")
+  
   (shell "git" "commit" "-m" "chore: automated project catalog sync")
   
   (println "Syncing Profile README...")
