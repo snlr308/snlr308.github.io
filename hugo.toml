@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'snlr308'
 theme = 'nostyleplease'
 
+[params]
+favicon = '/favicon.ico'
+
 [module]
   [[module.mounts]]
     source = 'content'
