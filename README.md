@@ -12,10 +12,10 @@
 | **Token-Rotation-Tool** | Simple tool that can be used to periodically rotate an API access token. Created by prompting GPT 4.1, using the Web API MCP Server | `Python` |
 | **Web_API_MCP2** | MCP Server that wraps an API. It adds value by taking care of SaaS-specific quirks, and providing dev-tools to write scripts, and providing all 'Resources' needed to go from 0 to 100 (exhaustive list of config settings, glossary, config recipies, others). | `Python` |
 | **nyancat-adventures** | 2-player cooperative Nyan Cat platformer game. Jump across platforms, collect coins, defeat long-cats, and unlock clothing sets with special powers! | `HTML` |
-| **V-You/Illumia-D2D-MCP** | Translate messy discovery notes into architecture, hardware BOM, and cross-sell leads | `Python` |
-| **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia | `Python` |
+| **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
+| **V-You/evervault-architect-mcp** | Improve your compliance in 5 minutes, without leaving your IDE. | `Python` |
+| **V-You/Illumia-D2D-MCP** | Translate messy discovery notes into architecture, hardware BOM, and cross-sell leads. | `Python` |
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
-| **V-You/evervault-architect-mcp** | Improve your compliance in 5 minutes, without leaving your IDE | `Python` |
 
 *Last automated sync: 2026-03-02 (GitHub Actions)*
 <!-- PROJECTS_END -->
