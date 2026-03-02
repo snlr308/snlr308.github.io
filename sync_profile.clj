@@ -93,12 +93,24 @@
   
   (shell "git" "commit" "-m" "chore: automated project catalog sync")
   
+  ;; --- Sync to profile repo (snlr308/snlr308) via clone-copy-push ---
   (println "Syncing Profile README...")
-  ;; Force-push required: pushing this repo's history into a different repo (snlr308/snlr308)
-  (shell {:sensitive true} "git" "push" "--force" profile-repo-url "main")
+  (shell "rm" "-rf" "temp_profile")
+  (shell {:sensitive true} "git" "clone" profile-repo-url "temp_profile")
+  (shell "cp" "README.md" "temp_profile/README.md")
+  (shell {:dir "temp_profile"} "git" "config" "user.name" "github-actions[bot]")
+  (shell {:dir "temp_profile"} "git" "config" "user.email" "github-actions[bot]@users.noreply.github.com")
+  (shell {:dir "temp_profile"} "git" "add" "README.md")
+  (let [profile-status (shell {:dir "temp_profile" :out :string} "git" "status" "--porcelain")]
+    (if (clojure.string/blank? (:out profile-status))
+      (println "Profile repo already up to date.")
+      (do
+        (shell {:dir "temp_profile"} "git" "commit" "-m" "chore: automated project catalog sync")
+        (shell {:dir "temp_profile" :sensitive true} "git" "push"))))
+  (shell "rm" "-rf" "temp_profile")
   
+  ;; --- Sync to website repo (same repo, normal push) ---
   (println "Syncing Website...")
-  ;; Normal push: same repo, keeps history compatible with local clones
   (shell {:sensitive true} "git" "push" website-repo-url "main")
   
   (println "Full Sync Complete!")))))
