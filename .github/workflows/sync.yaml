@@ -21,4 +21,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_USERNAME: "snlr308"
+          GH_ORGS: "V-You"
         run: bb sync_profile.clj

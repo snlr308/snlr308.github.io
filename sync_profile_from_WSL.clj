@@ -16,6 +16,8 @@
 (def github-token "token") 
 (def profile-repo "snlr308")
 
+;; Organizations to include in the project catalog
+(def org-names ["V-You"])
 
 (def headers {"Authorization" (str "Bearer " github-token)
               "Accept" "application/vnd.github.v3+json"})
@@ -23,20 +25,32 @@
 ;; --- LOGIC ---
 
 (defn fetch-all-repos []
-  (println "🔍 Querying GitHub API for project metadata...")
+  (println "🔍 Querying GitHub API for personal repos...")
   ;; 'type=owner' ensures we don't list forks or repos you've contributed to but don't own
   (let [url (str "https://api.github.com/user/repos?per_page=100&sort=updated&type=owner")]
     (-> (http/get url {:headers headers})
         :body
         (json/parse-string true))))
 
+(defn fetch-org-repos [org-name]
+  (println (str "🔍 Querying GitHub API for " org-name " org repos..."))
+  (let [url (str "https://api.github.com/orgs/" org-name "/repos?per_page=100&sort=updated")]
+    (->> (-> (http/get url {:headers headers})
+             :body
+             (json/parse-string true))
+         (map #(assoc % :org-name org-name)))))
+
 (defn format-repo-row [repo]
   (let [name     (get repo :name)
+        org      (get repo :org-name)
         private? (get repo :private)
         desc     (or (get repo :description) "_No description provided._")
         lang     (or (get repo :language) "Nix/Lisp")
-        status   (if private? "🔒" "🌍")]
-    (str "| " status " **" name "** | " desc " | `" lang "` |")))
+        status   (if private? "🔒" "🌍")
+        display  (if org
+                   (str org "/" name)
+                   name)]
+    (str "| " status " **" display "** | " desc " | `" lang "` |")))
 
 (defn generate-markdown-table [repos]
   (let [header "| S | Project Name & Description | Tech |\n| :--- | :--- | :--- |\n"
@@ -49,8 +63,10 @@
          "*Last automated sync: " (str (java.time.LocalDate/now)) "*")))
 
 (defn update-profile-readme! []
-  (let [repos (fetch-all-repos)
-        table-md (generate-markdown-table repos)]
+  (let [personal-repos (fetch-all-repos)
+        org-repos      (mapcat fetch-org-repos org-names)
+        all-repos      (concat personal-repos org-repos)
+        table-md (generate-markdown-table all-repos)]
     
     (println "📦 Cloning profile README repository...")
     (shell "rm -rf temp_profile")
