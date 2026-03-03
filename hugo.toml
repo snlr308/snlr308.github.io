@@ -6,6 +6,9 @@ theme = 'nostyleplease'
 [params]
 favicon = '/favicon.ico'
 
+[params.theme_config]
+isShowFooter = true
+
 [module]
   [[module.mounts]]
     source = 'content'
