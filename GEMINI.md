@@ -1,0 +1,1 @@
+- Do not delete file "git pull --rebase --autostash, then git push"
