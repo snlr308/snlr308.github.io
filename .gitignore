@@ -1,4 +1,3 @@
 .secrets
 tmp
 archaeologist.clj
-git pull --rebase --autostash, then git push
