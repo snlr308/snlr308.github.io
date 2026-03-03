@@ -23,9 +23,19 @@ table td {
     border-width: 0 0 1px 0 !important;
 }
 
+p em {
+    font-size: 0.8rem;
+    text-align: right;
+    display: block;
+}
+
+ul {
+    display: none;
+}
+
 .site-footer {
     border-top: 1px solid #eee;
-    padding-top: 1rem;
+    padding-top: 3rem;
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #666;
