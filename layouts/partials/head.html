@@ -2,27 +2,30 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {{ if .IsPage }} <meta name="description" content="{{ .Summary }}">  {{ end }}
+  {{ if .IsPage }}
+  <meta name="description" content="{{ .Summary }}"> {{ end }}
 
   <title>
     {{ if not .IsHome }}
-      {{ .Title }}
+    {{ .Title }}
     {{ else }}
-      {{ $.Site.Title }}
+    {{ $.Site.Title }}
     {{ end }}
   </title>
 
 
   <link rel="shortcut icon" type="image/x-icon" href="{{ $.Site.Params.favicon | relURL }}" />
   {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+  {{ if resources.Get "css/main.scss" }}
   {{ $sass := resources.Get "css/main.scss" }}
   {{ $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
+  {{ end }}
 
   {{ if resources.Get "css/custom.scss" }}
-    {{ $customSass := resources.Get "css/custom.scss" }}
-    {{ $customStyle := $customSass | css.Sass $options | resources.Fingerprint "sha512" }}
-    <link rel="stylesheet" href="{{ $customStyle.Permalink | relURL }}" integrity="{{ $customStyle.Data.Integrity }}" />
+  {{ $customSass := resources.Get "css/custom.scss" }}
+  {{ $customStyle := $customSass | css.Sass $options | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $customStyle.Permalink | relURL }}" integrity="{{ $customStyle.Data.Integrity }}" />
   {{ end }}
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
 </head>
