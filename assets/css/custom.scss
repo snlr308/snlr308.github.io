@@ -12,9 +12,15 @@ h1#projects {
     display: none;
 }
 
-td {
-    border: thin dotted #000;
-    border-width: 0 0 1px 0;
+body[a="auto"] table,
+body[a="auto"] th,
+body[a="auto"] td {
+    border: none;
+}
+
+table td {
+    border: thin dotted #000 !important;
+    border-width: 0 0 1px 0 !important;
 }
 
 .site-footer {
