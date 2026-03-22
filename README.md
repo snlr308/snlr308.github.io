@@ -12,13 +12,16 @@
 | **Token-Rotation-Tool** | Simple tool that can be used to periodically rotate an API access token. Created by prompting GPT 4.1, using the Web API MCP Server | `Python` |
 | **Web_API_MCP2** | MCP Server that wraps an API. It adds value by taking care of SaaS-specific quirks, and providing dev-tools to write scripts, and providing all 'Resources' needed to go from 0 to 100 (exhaustive list of config settings, glossary, config recipies, others). | `Python` |
 | **nyancat-adventures** | 2-player cooperative Nyan Cat platformer game. Jump across platforms, collect coins, defeat long-cats, and unlock clothing sets with special powers! | `HTML` |
+| **V-You/Web-API_Extension** | Browser-native, zero-infrastructure alternative to MCP that uses the active SaaS tab for context binding, executes logic locally, and minimizes data exposure. | `TypeScript` |
+| **V-You/readme-doc-healer** | Fix API documentation that has drifted from the spec: find gaps, use LLM to write fixes, measure if users notice improvemant. Write ReadMe-compatible content and surface live quality signals from a ReadMe project – all from the IDE. | `Python` |
+| **V-You/.github** | Bring Your Own Proof Of Concept | `Nix/Lisp` |
+| **V-You/VIP-Site-Probe** | MCP server that probes WordPress sites, produces CSE intake reports, optionally pushes findings to Zendesk. Perfect tool for a Customer Success Engineer or Technical Support Engineer. The tool delivers actionable insights directly in the IDE. Discovery > Action. Docs as tool. | `Python` |
 | **V-You/sunnyvale-onions-and-honey** | Where your shopping agent gets root access to produce! Faux online shop, integrating Evervault and ag-entic commerce. | `TypeScript` |
-| **V-You/readme-doc-healer** | Diagnoses API documentation gaps, helps the host LLM to generate improved ReadMe-compatible content, and surfaces live quality signals from a ReadMe project – all from the IDE. | `Python` |
 | **V-You/pliant-demo-architect-mcp** | Spin up tailored Pliant demo environments, test spend policies, and diagnose callback issues - all from the IDE. | `Python` |
 | **V-You/evervault-architect-mcp** | Improve your compliance in 5 minutes, without leaving your IDE. | `Python` |
 | **V-You/Illumia-D2D-MCP** | Translate messy discovery notes into architecture, hardware BOM, and cross-sell leads. | `Python` |
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-03-15 (GitHub Actions)*
+*Last automated sync: 2026-03-22 (GitHub Actions)*
 <!-- PROJECTS_END -->
