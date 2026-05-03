@@ -6,8 +6,8 @@
 | Repo | Description |  |
 | :--- | :--- | :--- |
 | **Agent-Lab** | Remote Agent Lab (PVE-hosted), dedicated virtual bridge, tiny NixOS VM as gateway, full NixOS as agentic controller, fleet of agents in VMs and Containers | `Nix` |
-| **awesome-webmcp** | 🤖 A curated list of awesome things related to the WebMCP proposal | `Nix/Lisp` |
 | **snlr308.github.io** | Command center | `Clojure` |
+| **awesome-webmcp** | 🤖 A curated list of awesome things related to the WebMCP proposal | `Nix/Lisp` |
 | **jumpermcp.dev** | website | `Astro` |
 | **Token-Rotation-Tool** | Periodically rotate an API token. Showcase for the power of Web API MCP Server (2025-11). Superseeded by "Api Tokens Operations" (2026-03). | `Python` |
 | **query-entity-config** | Safely run 12-hour queries: option to pause and resume, smart caching, audit logs and debug logs (sanitized), dupe handling, "log and continue" on error. Search term is a fixed "filter" (2 needles), additional filters supported in future release. | `Python` |
@@ -28,5 +28,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-04-26 (GitHub Actions)*
+*Last automated sync: 2026-05-03 (GitHub Actions)*
 <!-- PROJECTS_END -->
