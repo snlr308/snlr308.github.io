@@ -5,9 +5,10 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
+| **UNOS** | Unified NixOS System | `Nix/Lisp` |
+| **snlr308.github.io** | Command center | `Clojure` |
 | **slack-mcp** | - | `Nix/Lisp` |
 | **Agent-Lab** | Agent fleet & infra on a remote PVE (isolated bridge). Distributed VMs: tiny ingress gateway, agentic controller (King), governance (State), agents (Lab, Sandbox), egress for reputation control. Based on NixOS. | `Python` |
-| **snlr308.github.io** | Command center | `Clojure` |
 | **PayRam-Operator** | PayRam stack test | `Nix/Lisp` |
 | **jumpermcp.dev** | website | `Astro` |
 | **Token-Rotation-Tool** | Periodically rotate an API token. Showcase for the power of Web API MCP Server (2025-11). Superseeded by "Api Tokens Operations" (2026-03). | `Python` |
@@ -29,5 +30,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-06-14 (GitHub Actions)*
+*Last automated sync: 2026-06-21 (GitHub Actions)*
 <!-- PROJECTS_END -->
