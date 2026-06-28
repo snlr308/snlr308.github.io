@@ -5,12 +5,13 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
-| **UNOS** | Unified NixOS System | `Nix/Lisp` |
-| **snlr308.github.io** | Command center | `Clojure` |
-| **slack-mcp** | - | `Nix/Lisp` |
 | **Agent-Lab** | Agent fleet & infra on a remote PVE (isolated bridge). Distributed VMs: tiny ingress gateway, agentic controller (King), governance (State), agents (Lab, Sandbox), egress for reputation control. Based on NixOS. | `Python` |
-| **PayRam-Operator** | PayRam stack test | `Nix/Lisp` |
 | **jumpermcp.dev** | website | `Astro` |
+| **mcp-catalog** | - | `Nix/Lisp` |
+| **snlr308.github.io** | Command center | `Clojure` |
+| **UNOS** | Unified NixOS System | `Nix/Lisp` |
+| **slack-mcp** | - | `Nix/Lisp` |
+| **PayRam-Operator** | PayRam stack test | `Nix/Lisp` |
 | **Token-Rotation-Tool** | Periodically rotate an API token. Showcase for the power of Web API MCP Server (2025-11). Superseeded by "Api Tokens Operations" (2026-03). | `Python` |
 | **query-entity-config** | Safely run 12-hour queries: option to pause and resume, smart caching, audit logs and debug logs (sanitized), dupe handling, "log and continue" on error. Search term is a fixed "filter" (2 needles), additional filters supported in future release. | `Python` |
 | **Archive_Search** | Highly over-engineered grep wrapper: batch processing in the background (tmux), rate limiting, compression, audit logs, archive-in-the-archive, automation-ready, result transformation, hooks to ticketing system or channel, and more. | `Shell` |
@@ -30,5 +31,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-06-21 (GitHub Actions)*
+*Last automated sync: 2026-06-28 (GitHub Actions)*
 <!-- PROJECTS_END -->
