@@ -31,5 +31,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-07-05 (GitHub Actions)*
+*Last automated sync: 2026-07-12 (GitHub Actions)*
 <!-- PROJECTS_END -->
