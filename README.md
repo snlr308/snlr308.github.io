@@ -5,11 +5,11 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
-| **MtW** | Mount Washington caller incident  | `Nix/Lisp` |
-| **Agent-Lab** | Agent fleet & infra on a remote PVE (isolated bridge). Distributed VMs: tiny ingress gateway, agentic controller (King), governance (State), agents (Lab, Sandbox), egress for reputation control. Based on NixOS. | `Python` |
-| **snlr308.github.io** | Command center | `Clojure` |
-| **UNOS** | Unified NixOS System | `Nix` |
 | **jumpermcp.dev** | website | `Astro` |
+| **UNOS** | Unified NixOS System | `Nix` |
+| **Agent-Lab** | Agent fleet & infra on a remote PVE (isolated bridge). Distributed VMs: tiny ingress gateway, agentic controller (King), governance (State), agents (Lab, Sandbox), egress for reputation control. Based on NixOS. | `Python` |
+| **MtW** | Mount Washington caller incident  | `Nix/Lisp` |
+| **snlr308.github.io** | Command center | `Clojure` |
 | **mcp-catalog** | - | `Nix/Lisp` |
 | **slack-mcp** | - | `Nix/Lisp` |
 | **PayRam-Operator** | PayRam stack test | `Nix/Lisp` |
@@ -32,5 +32,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-07-19 (GitHub Actions)*
+*Last automated sync: 2026-07-26 (GitHub Actions)*
 <!-- PROJECTS_END -->
