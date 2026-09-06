@@ -5,8 +5,9 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
-| **snlr308.github.io** | Command center | `Clojure` |
 | **UNOS** | Unified NixOS System | `Nix` |
+| **365positions** | ATS tracker | `Nix/Lisp` |
+| **snlr308.github.io** | Command center | `Clojure` |
 | **jumpermcp.dev** | website | `Astro` |
 | **Agent-Lab** | Agent fleet & infra on a remote PVE (isolated bridge). Distributed VMs: tiny ingress gateway, agentic controller (King), governance (State), agents (Lab, Sandbox), egress for reputation control. Based on NixOS. | `Python` |
 | **MtW** | Mount Washington caller incident  | `Nix/Lisp` |
@@ -32,5 +33,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-08-30 (GitHub Actions)*
+*Last automated sync: 2026-09-06 (GitHub Actions)*
 <!-- PROJECTS_END -->
