@@ -5,22 +5,22 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
-| **browsercats.gg** | Two-player 3D pillar-hopping cat game. Boost your powers in the wardrobe and sing together to sneak past gatekeepers! | `TypeScript` |
-| **UNOS** | Unified NixOS System | `Nix` |
 | **jumpermcp.dev** | website | `Astro` |
-| **snlr308.github.io** | Command center | `Clojure` |
+| **UNOS** | Unified NixOS System | `Nix` |
+| **query-entity-config** | Safely run 12-hour queries: option to pause and resume, smart caching, audit logs and debug logs (sanitized), dupe handling, "log and continue" on error. Search term is a fixed "filter" (2 needles), additional filters supported in future release. | `Python` |
+| **Archive_Search** | Highly over-engineered grep wrapper: batch processing in the background (tmux), rate limiting, compression, audit logs, archive-in-the-archive, automation-ready, result transformation, hooks to ticketing system or channel, and more. | `Shell` |
+| **Web_API_MCP2** | MCP Server that wraps an API. It adds value by taking care of SaaS-specific quirks, and providing dev-tools to write scripts, and providing all 'Resources' needed to go from 0 to 100 (exhaustive list of config settings, glossary, config recipies, others). | `Python` |
+| **POPP-widgets** | Userscripts that extend a SaaS with two crucial functions - click through pagination and calculate USD, and open and cross-link a TS ticket from all details known about a transaction. | `JavaScript` |
+| **PayRam-Operator** | PayRam stack test | `Nix/Lisp` |
 | **365positions** | ATS tracker | `Python` |
+| **browsercats.gg** | Two-player 3D pillar-hopping cat game. Boost your powers in the wardrobe and sing together to sneak past gatekeepers! | `TypeScript` |
+| **snlr308.github.io** | Command center | `Clojure` |
 | **local-ai** | Client-side tools, prompts and personas for the local AI services on m5 (llama-swap gateway: LLM, STT, later TTS and diffusion) | `Python` |
 | **Agent-Lab** | Agent fleet & infra on a remote PVE (isolated bridge). Distributed VMs: tiny ingress gateway, agentic controller (King), governance (State), agents (Lab, Sandbox), egress for reputation control. Based on NixOS. | `Python` |
 | **MtW** | Mount Washington caller incident  | `Nix/Lisp` |
 | **mcp-catalog** | - | `Nix/Lisp` |
 | **slack-mcp** | - | `Nix/Lisp` |
-| **PayRam-Operator** | PayRam stack test | `Nix/Lisp` |
 | **Token-Rotation-Tool** | Periodically rotate an API token. Showcase for the power of Web API MCP Server (2025-11). Superseeded by "Api Tokens Operations" (2026-03). | `Python` |
-| **query-entity-config** | Safely run 12-hour queries: option to pause and resume, smart caching, audit logs and debug logs (sanitized), dupe handling, "log and continue" on error. Search term is a fixed "filter" (2 needles), additional filters supported in future release. | `Python` |
-| **Archive_Search** | Highly over-engineered grep wrapper: batch processing in the background (tmux), rate limiting, compression, audit logs, archive-in-the-archive, automation-ready, result transformation, hooks to ticketing system or channel, and more. | `Shell` |
-| **POPP-widgets** | Userscripts that extend a SaaS with two crucial functions - click through pagination and calculate USD, and open and cross-link a TS ticket from all details known about a transaction. | `JavaScript` |
-| **Web_API_MCP2** | MCP Server that wraps an API. It adds value by taking care of SaaS-specific quirks, and providing dev-tools to write scripts, and providing all 'Resources' needed to go from 0 to 100 (exhaustive list of config settings, glossary, config recipies, others). | `Python` |
 | **nyancat-adventures** | 2-player cooperative Nyan Cat platformer game. Jump across platforms, collect coins, defeat long-cats, and unlock clothing sets with special powers! | `HTML` |
 | **V-You/sunnyvale-onions-and-honey** | Where your shopping agent gets root access to produce! Faux online shop, integrating Evervault and ag-entic commerce. | `TypeScript` |
 | **V-You/Web-API_Extension** | Browser-native, zero-infrastructure alternative to MCP that uses the active SaaS tab for context binding, executes logic locally, and minimizes data exposure. | `TypeScript` |
@@ -35,5 +35,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-10-25 (GitHub Actions)*
+*Last automated sync: 2026-11-01 (GitHub Actions)*
 <!-- PROJECTS_END -->
