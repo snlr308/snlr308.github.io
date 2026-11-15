@@ -5,16 +5,19 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
+| **awesome-webmcp-yigitkonur** | A curated list of WebMCP resources – the new web standard that lets websites expose structured tools for AI agents. Replace screen-scraping with reliable, schema-driven interaction. Includes specs, SDKs, demos, tutorials, and platform integrations for Chrome 146+. Learn how to make your site AI-agent ready. | `Nix/Lisp` |
+| **awesome-webmcp-wml** | 🤖 A curated list of awesome things related to the WebMCP proposal | `Nix/Lisp` |
+| **awesome-webmcp-webfuse** | A curated list of awesome things related to the WebMCP W3C standard | `Nix/Lisp` |
+| **browsercats.gg** | Two-player 3D pillar-hopping cat game. Boost your powers in the wardrobe and sing together to sneak past gatekeepers! | `TypeScript` |
 | **UNOS** | Unified NixOS System | `Nix` |
-| **jumpermcp.dev** | website | `Astro` |
 | **snlr308.github.io** | Command center | `Clojure` |
+| **jumpermcp.dev** | website | `Astro` |
 | **query-entity-config** | Safely run 12-hour queries: option to pause and resume, smart caching, audit logs and debug logs (sanitized), dupe handling, "log and continue" on error. Search term is a fixed "filter" (2 needles), additional filters supported in future release. | `Python` |
 | **Archive_Search** | Highly over-engineered grep wrapper: batch processing in the background (tmux), rate limiting, compression, audit logs, archive-in-the-archive, automation-ready, result transformation, hooks to ticketing system or channel, and more. | `Shell` |
 | **Web_API_MCP2** | MCP Server that wraps an API. It adds value by taking care of SaaS-specific quirks, and providing dev-tools to write scripts, and providing all 'Resources' needed to go from 0 to 100 (exhaustive list of config settings, glossary, config recipies, others). | `Python` |
 | **POPP-widgets** | Userscripts that extend a SaaS with two crucial functions - click through pagination and calculate USD, and open and cross-link a TS ticket from all details known about a transaction. | `JavaScript` |
 | **PayRam-Operator** | PayRam stack test | `Nix/Lisp` |
 | **365positions** | ATS tracker | `Python` |
-| **browsercats.gg** | Two-player 3D pillar-hopping cat game. Boost your powers in the wardrobe and sing together to sneak past gatekeepers! | `TypeScript` |
 | **local-ai** | Client-side tools, prompts and personas for the local AI services on m5 (llama-swap gateway: LLM, STT, later TTS and diffusion) | `Python` |
 | **Agent-Lab** | Agent fleet & infra on a remote PVE (isolated bridge). Distributed VMs: tiny ingress gateway, agentic controller (King), governance (State), agents (Lab, Sandbox), egress for reputation control. Based on NixOS. | `Python` |
 | **MtW** | Mount Washington caller incident  | `Nix/Lisp` |
@@ -35,5 +38,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-11-08 (GitHub Actions)*
+*Last automated sync: 2026-11-15 (GitHub Actions)*
 <!-- PROJECTS_END -->
