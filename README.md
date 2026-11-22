@@ -5,6 +5,7 @@
 
 | Repo | Description |  |
 | :--- | :--- | :--- |
+| **scrim-nix** | Nix flake for scrim, a minimal headless browser for AI agents. | `Nix` |
 | **awesome-webmcp-yigitkonur** | A curated list of WebMCP resources – the new web standard that lets websites expose structured tools for AI agents. Replace screen-scraping with reliable, schema-driven interaction. Includes specs, SDKs, demos, tutorials, and platform integrations for Chrome 146+. Learn how to make your site AI-agent ready. | `Nix/Lisp` |
 | **awesome-webmcp-wml** | 🤖 A curated list of awesome things related to the WebMCP proposal | `Nix/Lisp` |
 | **awesome-webmcp-webfuse** | A curated list of awesome things related to the WebMCP W3C standard | `Nix/Lisp` |
@@ -38,5 +39,5 @@
 | **V-You/zerohash-settlement-health-mcp** | Diagnose Trade & Transact issues in seconds, directly where the logs are, get actionable results.   | `Python` |
 | **V-You/Swarmia_MCP** | Documentation DevEx for Swarmia. Check commit hygiene and get actionable advice directly in your IDE. | `Python` |
 
-*Last automated sync: 2026-11-15 (GitHub Actions)*
+*Last automated sync: 2026-11-22 (GitHub Actions)*
 <!-- PROJECTS_END -->
